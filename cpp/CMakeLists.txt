@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 2.6)
+set (CMAKE_CXX_STANDARD 11)
+project (SimpleEncoder)
+add_executable(SimpleEncoder integer_encoder/IntegerCodec.hpp integer_encoder/IntegerCodec.cpp)
+#add_executable(ScottsSimpleVLCEncoder SimpleVlcEncoder.cpp SimpleHistogramContainer.cpp SimpleCodewordTableContainer.cpp)
