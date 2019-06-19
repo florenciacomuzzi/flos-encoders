@@ -26,7 +26,3 @@ std::vector<bool> IntegerCodec::unary_encoder(int num) {
     }
     return code;
 }
-
-int main() {
-    IntegerCodec::unary_encoder(12);
-}
