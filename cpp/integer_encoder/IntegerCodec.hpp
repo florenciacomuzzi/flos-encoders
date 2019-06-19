@@ -13,6 +13,6 @@ public:
     static std::vector<bool> unary_encoder(int);
 //    std::bitset<M> elias_gamma_encoder(int) const;
 
-//    int unary_decoder(std::bitset<M>) const;
+    static int unary_decoder(std::vector<bool>);
 //    int elias_gamma_decoder(std::bitset<M>) const;
 };

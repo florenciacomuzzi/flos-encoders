@@ -26,3 +26,18 @@ std::vector<bool> IntegerCodec::unary_encoder(int num) {
     }
     return code;
 }
+
+
+int IntegerCodec::unary_decoder(std::vector<bool> code) {
+    if(code.empty()) {
+        throw std::invalid_argument("No code provided.");
+    }
+    int count = 0;
+    for (std::vector<bool>::const_iterator i = code.begin(); i != code.end(); i++){
+        count++;
+        if(*i == 0) {
+            break;
+        }
+    }
+    return count;
+}

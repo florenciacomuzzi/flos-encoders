@@ -17,3 +17,9 @@ TEST(TestSuiteName, invalid_arg){
         FAIL() << "Expected std::invalid_argument" << std::endl;
     }
 }
+
+TEST(TestSuiteName, correct_output_decoder){
+    ASSERT_EQ(IntegerCodec::unary_decoder(std::vector<bool>({0})), 1) << "Result is wrong.";
+    ASSERT_EQ(IntegerCodec::unary_decoder(std::vector<bool>({1,1,1,1,0})), 5) << "Result is wrong.";
+    ASSERT_EQ(IntegerCodec::unary_decoder(std::vector<bool>({1,1,1,1,1,1,1,1,1,0})), 10) << "Result is wrong.";
+}
